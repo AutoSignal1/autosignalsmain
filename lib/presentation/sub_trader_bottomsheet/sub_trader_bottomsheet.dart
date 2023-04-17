@@ -1,0 +1,9 @@
+import 'controller/sub_trader_controller.dart';import 'package:auto_s_application1/core/app_export.dart';import 'package:auto_s_application1/widgets/custom_button.dart';import 'package:flutter/material.dart';
+// ignore_for_file: must_be_immutable
+class SubTraderBottomsheet extends StatelessWidget {SubTraderBottomsheet(this.controller);
+
+SubTraderController controller;
+
+@override Widget build(BuildContext context) { return SingleChildScrollView(child: Container(width: double.maxFinite, child: Container(width: double.maxFinite, padding: getPadding(left: 16, top: 40, right: 16, bottom: 40), decoration: AppDecoration.fillWhiteA700.copyWith(borderRadius: BorderRadiusStyle.customBorderTL15), child: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.center, children: [CustomImageView(imagePath: ImageConstant.imgIcons8checkmark, height: getSize(48), width: getSize(48)), Padding(padding: getPadding(top: 15), child: Text("msg_subscription_confirmed".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtInterSemiBold14)), Container(width: getHorizontalSize(318), margin: getMargin(left: 12, top: 32, right: 11), child: RichText(text: TextSpan(children: [TextSpan(text: "msg_you_ve_successfully3".tr, style: TextStyle(color: ColorConstant.gray80001, fontSize: getFontSize(14), fontFamily: 'Inter', fontWeight: FontWeight.w400)), TextSpan(text: "msg_voltage_crew_and".tr, style: TextStyle(color: ColorConstant.blueGray900, fontSize: getFontSize(14), fontFamily: 'Inter', fontWeight: FontWeight.w500))]), textAlign: TextAlign.center)), CustomButton(height: getVerticalSize(46), text: "lbl_continue".tr, margin: getMargin(top: 38, bottom: 1), variant: ButtonVariant.FillOrangeA700, padding: ButtonPadding.PaddingAll12, fontStyle: ButtonFontStyle.InterMedium16, onTap: onTapContinue)])))); } 
+onTapContinue() { Get.toNamed(AppRoutes.traderDetOpenTabContainerScreen); } 
+ }
